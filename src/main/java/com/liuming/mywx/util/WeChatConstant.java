@@ -1,12 +1,11 @@
 package com.liuming.mywx.util;
 
 public class WeChatConstant {
-    //APPID
+    //修改成你自己的
     public static final String appID = "appid";
-    //appsecret
     public static final String appsecret = "appsecret";
-    // Token
-    public static final String TOKEN = "lym"; //修改成你自己的
+    public static final String TOKEN = "lym";
+
     public static final String RESP_MESSAGE_TYPE_TEXT = "text";
     public static final Object REQ_MESSAGE_TYPE_TEXT = "text";
     public static final Object REQ_MESSAGE_TYPE_IMAGE = "image";
@@ -21,8 +20,8 @@ public class WeChatConstant {
     public static final Object EVENT_TYPE_LOCATION = "LOCATION";
     public static final Object EVENT_TYPE_CLICK = "CLICK";
 
-    public static final String FromUserName = "FromUserName";
-    public static final String ToUserName = "ToUserName";
+    public static final String FromUserName = "FromUserName";   //粉丝
+    public static final String ToUserName = "ToUserName";       //公众号
     public static final String MsgType = "MsgType";
     public static final String Content = "Content";
     public static final String Event = "Event";
