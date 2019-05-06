@@ -79,6 +79,17 @@
                     </arguments>
                 </configuration>
             </plugin>
+
+            <!--
+            https://github.com/GoogleContainerTools/jib
+            ./mvnw compile jib:build -Dimage=<your image, eg. gcr.io/my-project/spring-boot-jib>
+            -->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>1.1.2</version>
+            </plugin>
+
         </plugins>
     </build>
 
