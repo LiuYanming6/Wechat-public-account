@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -88,6 +89,33 @@
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>1.1.2</version>
+                <configuration>
+                    <from>
+                        <image>
+                            liuyanming/myjava8:v1
+                        </image>
+                        <auth>
+                            <username>liuyanming</username>
+                            <password>302998081</password>
+                        </auth>
+                    </from>
+                    <!-- -Dimage -->
+                    <to>
+                        <!--                        <image>image-built-with-jib</image>-->
+                        <image>
+                            liuyanming/myjava8spring:v1
+                        </image>
+                        <auth>
+                            <username>liuyanming</username>
+                            <password>302998081</password>
+                        </auth>
+                        <!-- 鉴权信息的存放方式,可以参考 docker-credential-helpers
+                            Google  - gcr
+                            AWS     - ecr-login
+                            DockerHub 根据平台使用 osxkeychain, wincred,secretservice,pass中的一种-->
+                        <credHelper>secretservice</credHelper>
+                    </to>
+                </configuration>
             </plugin>
 
         </plugins>
