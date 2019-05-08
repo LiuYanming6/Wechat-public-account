@@ -107,17 +107,19 @@
                         </image>
                         <auth>
                             <username>liuyanming</username>
-                            <password>302998081</password>
+                            <password>xxxxxxxxx</password>
                         </auth>
                         <!-- 鉴权信息的存放方式,可以参考 docker-credential-helpers
                             Google  - gcr
                             AWS     - ecr-login
-                            DockerHub 根据平台使用 osxkeychain, wincred,secretservice,pass中的一种-->
-                        <credHelper>secretservice</credHelper>
+                            DockerHub 根据平台使用 osxkeychain, wincred,secretservice,pass中的一种
+                            下载对应文件解压到/usr/bin/
+                        https://github.com/docker/docker-credential-helpers/releases
+                            -->
+                        <credHelper>pass</credHelper>
                     </to>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
